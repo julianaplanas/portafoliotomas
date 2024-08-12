@@ -1,0 +1,283 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Comfortaa', cursive;
+}
+
+/* MAIN MENU */
+
+.main-menu-box{
+    position: absolute;
+}
+
+.menu-box{
+    display: flex;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.menu{
+    color: #4C586B;
+    font-size: 2.9rem;
+    cursor: pointer;
+    border-bottom: 5px solid #9ACFDD;
+}
+
+.contact-nav{
+    border-bottom: none;
+}
+
+.menu:hover{
+    color: #9ACFDD;
+}
+
+#about-box, #projects-box, #events-box, #publications-box, #contact-box{
+    display: none;
+}
+
+#burger-menu-box{
+    display: none;
+}
+
+.navbar-start a{
+    color: #4C586B;
+}
+
+.navbar-start a:hover, .navbar-start a:active{
+    color: #9ACFDD;
+}
+
+/* CONTACT FOOTER */
+.contact-footer{
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+.contact-footer a{
+    text-decoration: none;
+    color: #9ACFDD;
+    text-align: right;
+}
+
+.contact-footer a:hover{
+    color: #4C586B;
+}
+
+/* //// */
+
+.section-title{
+    color: #4C586B;
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+/* ABOUT */
+
+.name-title{
+    font-size: 2rem;
+    color: #9ACFDD;
+}
+
+.about-subtitle{
+    font-weight: 700;
+    margin-bottom: 10px;
+    margin-top: 50px;
+}
+
+#about-box{
+    padding-left: 30px;
+}
+
+.border-bottom{
+    padding-bottom: 40px;
+    border-bottom: 3px solid #9ACFDD;
+}
+
+.about-list{
+    list-style-type: square;
+}
+
+.about-list li{
+    margin-bottom: 3px;
+}
+
+/* PROJECTS */
+
+.project-link{
+    color: #9ACFDD;
+}
+
+.project-link:hover{
+    color: #4C586B;
+}
+
+/* EVENTS */
+
+.box{
+    box-shadow: none;
+    border: none;
+}
+
+.event-image{
+    width: 100%;
+}
+
+.events-titles{
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+.events-p{
+    font-size: 1rem;
+}
+
+.sepicall-box{
+    margin: 0 10px;
+}
+
+/* PUBLICATIONS */
+
+.columns + .columns {
+    flex-direction: column;
+}
+
+.publi-image img{
+    width: 100%;
+}
+
+.publi-image,
+.publi-image * {
+	box-sizing: border-box;
+}
+
+.publi-image {
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	max-width: 100%;
+	height: auto;
+    cursor: pointer;
+}
+
+.publi-image img {
+	max-width: 100%;
+}
+
+.publi-image .publi-layer_bottom {
+	display: block;
+}
+
+.publi-image .publi-layer_top {
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+	color: #fff;
+	padding: 15px;
+	-moz-transition: all 0.4s ease-in-out 0s;
+	-webkit-transition: all 0.4s ease-in-out 0s;
+	-ms-transition: all 0.4s ease-in-out 0s;
+	transition: all 0.4s ease-in-out 0s;
+}
+
+.publi-image:hover .publi-layer_top,
+.publi-image.active .publi-layer_top {
+	opacity: 1;
+}
+
+.publi-image .publi-text {
+    font-family: 'Comfortaa', cursive;
+	text-align: center;
+	font-size: 18px;
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-moz-transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+.publi-image .publi-text_mobile {
+	font-size: 15px;
+	border-top: 1px solid rgb(179, 179, 179);
+	border-top: 1px solid rgba(179, 179, 179, 0.7);
+	margin-top: 5px;
+	padding-top: 2px;
+	display: none;
+}
+
+.publi-image.active .publi-text_mobile {
+	display: block;
+}
+
+.publi-mobile{
+    display: none;
+}
+
+/* CONTACT */
+.contact-menu{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-items{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-items h1{
+    margin-bottom: 5px;
+}
+
+.contact-items a, .about-subtitle a, .about-list a{
+    color: #9ACFDD;
+}
+
+.contact-items a:hover, .about-subtitle a:hover, .about-list a:hover{
+    color: #4C586B;
+}
+
+#gmail{
+    margin-top: 15px;
+    display: none;
+}
+
+/* RESPONSIVE */
+
+@media(min-width: 450px){
+    .menu{
+        font-size: 4.5rem;
+    }
+}
+
+@media(min-width: 700px){
+    .menu{
+        font-size: 5.5rem;
+    }
+}
+
+@media(min-width: 900px){
+    .menu{
+        font-size: 6.2rem;
+    }
+    .name-title{
+        font-size: 3rem;
+    }
+    #about-box{
+        padding-left: 0;
+    }
+}
