@@ -135,7 +135,7 @@ nav ul li a {
 }
 
 .gallery-item.vertical img {
-    max-height: 800px;
+    max-height: 600px;
     width: auto;
 }
 
@@ -171,6 +171,14 @@ nav ul li a {
 
 /* Media query for mobile */
 @media (max-width: 768px) {
+    .home-section {
+        height: auto;
+    }
+
+    .work-section {
+        padding-top: 3em;
+    }
+
     .content img {
         width: 100%; 
     }
@@ -178,6 +186,9 @@ nav ul li a {
     .bio-content {
         grid-template-columns: 1fr; 
         text-align: center;
+        flex-direction: column-reverse;
+        padding-top: 18em;
+        align-items: center;
     }
 
     .bio-section h2 {
@@ -190,11 +201,27 @@ nav ul li a {
         max-width: 80%; 
     }
 
+    .gallery-item.left, .gallery-item.center, .gallery-item.right {
+        align-items: center;
+    }
+
     .gallery-item img {
         max-width: 90%; /* Scale down image size for mobile */
     }
 
+    .gallery-item.vertical img {
+        max-height: 300px;
+    }
+
+    .gallery-item p {
+        font-size: 0.8em;
+    }
+
     .contact-section img {
         width: 40px; /* Adjust icon size for smaller screens */
+    }
+
+    .contact-section {
+        min-height: auto;
     }
 }
