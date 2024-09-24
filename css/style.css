@@ -5,10 +5,11 @@ body {
     align-items: center;
     justify-content: center;
     height: 100%;
-    margin: 0;
+    margin: 20px;
     margin-top: 5em;
     background-color: #ffffff;
     scroll-behavior: smooth; 
+    font-size: 1.5em;
 }
 
 nav {
@@ -37,18 +38,16 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: #333;
-    font-size: 3em;
 }
 
 .home-section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     height: 100vh;
     width: 100%;
     text-align: center;
-    font-size: 2.4em;
     color: #777;
 }
 
@@ -57,9 +56,8 @@ nav ul li a {
     height: auto; 
 }
 
-.bio-section h2 {
-    font-size: 3.6em;
-    padding: 50px 20px;
+.bio-section {
+    padding-top: 4em;
 }
 
 .bio-content {
@@ -69,19 +67,22 @@ nav ul li a {
     align-items: flex-start; 
     height: 100vh; 
     text-align: left;
-    padding: 0 20px;
 }
 
 .bio-content p {
-    font-size: 2em;
     color: #555;
-    margin: 0;
+    font-size: 0.8em;
+}
+
+.spacer {
+    display: block; /* Makes the span act like a block (creating a line break) */
+    height: 20px;   /* Controls the height of the blank space */
 }
 
 .bio-content img {
     width: 100%;
     height: auto;
-    max-width: 60em; 
+    max-width: 20em; 
     border-radius: 10px;
 }
 
@@ -90,16 +91,15 @@ nav ul li a {
     min-height: 100vh;
 }
 
-.work-section h2 {
-    font-size: 3.6em;
-    padding: 50px 20px;
+.work-section {
+    padding-top: 4em;
 }
 
 /* Single-column grid layout */
 .gallery {
     display: grid;
-    grid-template-columns: 1fr; /* One column per row */
-    grid-gap: 40px; /* Space between items */
+    grid-template-columns: 1fr; 
+    grid-gap: 40px; 
 }
 
 /* Gallery item (image + title) */
@@ -112,11 +112,11 @@ nav ul li a {
 .gallery-item img {
     width: 100%;
     height: auto;
-    max-width: 800px; /* Control maximum width of images */
+    max-width: 800px; 
 }
 
 .gallery-item p {
-    font-size: 18px;
+    font-size: 0.5em;
     color: #555;
     margin-top: 10px;
 }
@@ -132,6 +132,41 @@ nav ul li a {
 
 .gallery-item.right {
     align-items: flex-end; /* Align items to the right */
+}
+
+.gallery-item.vertical img {
+    max-height: 800px;
+    width: auto;
+}
+
+/* Contact Section */
+.contact-section {
+    display: flex;
+    flex-direction: column;   /* Arrange text above icons */
+    justify-content: center;  /* Center content horizontally */
+    align-items: center;      /* Center content vertically */
+    min-height: 100vh;        /* Make sure the section takes full screen height */
+}
+
+.contact-section p {           
+    margin-bottom: 20px;       /* Space between text and icons */
+}
+
+/* Icon styling */
+.contact-section a {
+    display: inline-block; /* Ensures the link wraps the entire image */
+    margin: 0 20px; /* Space between the icons */
+}
+
+.contact-section img {
+    width: 50px; /* Icon size */
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease; /* Hover effect */
+}
+
+.contact-section img:hover {
+    transform: scale(1.2); /* Slightly enlarge the icon on hover */
 }
 
 /* Media query for mobile */
@@ -157,5 +192,9 @@ nav ul li a {
 
     .gallery-item img {
         max-width: 90%; /* Scale down image size for mobile */
+    }
+
+    .contact-section img {
+        width: 40px; /* Adjust icon size for smaller screens */
     }
 }
