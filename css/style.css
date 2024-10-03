@@ -1,12 +1,36 @@
+.quantico-regular {
+    font-family: "Quantico", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+.quantico-bold {
+    font-family: "Quantico", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+  
+.quantico-regular-italic {
+    font-family: "Quantico", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+  
+.quantico-bold-italic {
+    font-family: "Quantico", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}  
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Quantico", sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100%;
     margin: 20px;
-    margin-top: 5em;
+    margin-top: 1em;
     background-color: #ffffff;
     scroll-behavior: smooth; 
     font-size: 1.5em;
@@ -18,7 +42,7 @@ nav {
     top: 0;
     width: 100%;
     text-align: right;
-    padding: 10px 0;
+    padding: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
     z-index: 1000;
     background-color: #ffffff;
@@ -26,7 +50,7 @@ nav {
 
 nav ul {
     list-style: none;
-    padding: 0;
+    padding: 0 15px;
     display: inline-flex;
     gap: 15px;
     margin: 0;
@@ -54,7 +78,7 @@ nav ul li a {
 }
 
 .home-section img {
-    width: 100%; 
+    width: 90%; 
     height: auto; 
 }
 
@@ -62,16 +86,21 @@ nav ul li a {
 .work-section {
     width: 100%;
     min-height: 100vh;
-}
-
-.work-section {
     padding-top: 4em;
 }
 
+.work-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
 .gallery {
-    display: grid;
-    grid-template-columns: 1fr; 
-    grid-gap: 40px; 
+    display: flex;
+    flex-direction: column; 
+    gap: 20px; 
+    width: 100%; 
 }
 
 .gallery-item {
@@ -81,15 +110,18 @@ nav ul li a {
 }
 
 .gallery-item img {
-    width: 100%;
-    height: auto;
-    max-width: 800px; 
+    max-width: 600px;  
+    height: auto;  
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease;
 }
 
 .gallery-item p {
     font-size: 0.5em;
     color: #555;
     margin-top: 10px;
+    font-size: 10px;
 }
 
 .gallery-item.left {
@@ -125,7 +157,7 @@ nav ul li a {
 
 .bio-content p {
     color: #555;
-    font-size: 1em;
+    font-size: 20px;
 }
 
 .spacer {
@@ -171,14 +203,24 @@ nav ul li a {
 
 /* Media query for mobile */
 @media (max-width: 768px) {
+    .body {
+        margin-top: 2.5em;
+    }
+
     /* HOME SECTION */
     .home-section {
         height: auto;
     }
 
     /* WORK SECTION */
+    .work-content {
+        padding: 10px;
+    }
+
     .work-section {
         padding-top: 3em;
+        position: relative;
+        margin-bottom: 10em;
     }
 
     .content img {
@@ -189,11 +231,11 @@ nav ul li a {
     }
 
     .gallery-item img {
-        max-width: 90%; 
+        max-width: 100%; 
     }
 
     .gallery-item.vertical img {
-        max-height: 300px;
+        max-height: 400px;
     }
 
     .gallery-item p {
@@ -226,5 +268,6 @@ nav ul li a {
 
     .contact-section {
         min-height: auto;
+        height: 20vh;
     }
 }
