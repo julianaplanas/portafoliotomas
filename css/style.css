@@ -1,29 +1,7 @@
-.quantico-regular {
-    font-family: "Quantico", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-  
-.quantico-bold {
-    font-family: "Quantico", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-}
-  
-.quantico-regular-italic {
-    font-family: "Quantico", sans-serif;
-    font-weight: 400;
-    font-style: italic;
-}
-  
-.quantico-bold-italic {
-    font-family: "Quantico", sans-serif;
-    font-weight: 700;
-    font-style: italic;
-}  
-
 body {
-    font-family: "Quantico", sans-serif;
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -33,7 +11,7 @@ body {
     margin-top: 1em;
     background-color: #ffffff;
     scroll-behavior: smooth; 
-    font-size: 1.5em;
+    font-size: 1.3em;
 }
 
 /* NAVIGATION SECTION */
@@ -43,7 +21,6 @@ nav {
     width: 100%;
     text-align: right;
     padding: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
     z-index: 1000;
     background-color: #ffffff;
 }
@@ -69,8 +46,8 @@ nav ul li a {
 .home-section {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
+    align-items: left;
+    justify-content: flex-start;
     height: 100vh;
     width: 100%;
     text-align: center;
@@ -78,13 +55,13 @@ nav ul li a {
 }
 
 .home-section img {
-    width: 90%; 
+    width: 50%; 
     height: auto; 
 }
 
 /* WORK SECTION */
 .work-section {
-    width: 100%;
+    width: 70%;
     min-height: 100vh;
     padding-top: 4em;
 }
@@ -99,7 +76,7 @@ nav ul li a {
 .gallery {
     display: flex;
     flex-direction: column; 
-    gap: 20px; 
+    gap: 70px; 
     width: 100%; 
 }
 
@@ -110,7 +87,7 @@ nav ul li a {
 }
 
 .gallery-item img {
-    max-width: 600px;  
+    max-width: 100%;  
     height: auto;  
     border-radius: 8px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
@@ -118,10 +95,16 @@ nav ul li a {
 }
 
 .gallery-item p {
-    font-size: 0.5em;
+    font-size: 13px;
     color: #555;
     margin-top: 10px;
-    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery-item p span {
+    font-size: 15px;
+    font-weight: 600;
 }
 
 .gallery-item.left {
