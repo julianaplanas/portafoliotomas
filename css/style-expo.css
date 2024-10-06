@@ -1,6 +1,6 @@
 /* Estilos básicos */
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Poppins", sans-serif;
     margin: 0;
     padding: 20px;
 }
@@ -25,6 +25,10 @@ p {
     color: #555;
 }
 
+p span {
+    font-weight: 600;
+}
+
 /* Galería */
 .gallery {
     display: grid;
@@ -33,20 +37,14 @@ p {
 }
 
 .gallery img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
 }
 
 .gallery .vertical {
-    max-height: 50%;
+    max-height: 100%;
+    width: auto;
 }
-
-.gallery img:hover {
-    transform: scale(1.05); /* Efecto hover */
- }
 
 /* Estilo responsive para pantallas pequeñas */
 @media (max-width: 768px) {
