@@ -243,6 +243,10 @@ nav ul li a {
         width: 100%;
     }
 
+    .bio-content p {
+        font-size: 15px;
+    }
+
     .bio-content img {
         max-width: 80%; 
         margin-bottom: 20px;
