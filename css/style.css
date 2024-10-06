@@ -235,7 +235,7 @@ nav ul li a {
         grid-template-columns: 1fr; 
         text-align: center;
         flex-direction: column-reverse;
-        padding-top: 30em;
+        padding-top: 10em;
     }
 
     .bio-section h2 {
